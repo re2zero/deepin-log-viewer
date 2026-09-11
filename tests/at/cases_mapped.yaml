@@ -1,0 +1,271 @@
+version: '1.0'
+cases:
+- id: suite_detail_001_s1
+  name: 查看日志详情_文本浏览器
+  module: detail
+  steps:
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: mainLogTable
+    do: click
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: TextBrowser
+- id: suite_export_001_s1
+  name: 全部导出_点击全部导出按钮
+  module: export
+  steps:
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: ExportAllBtn
+    do: click
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: ExportAllBtn
+- id: suite_filter_time_s1
+  name: 按时间筛选_全部按钮依次点击
+  module: filter
+  steps:
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: AllBtn
+    do: click
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: TodayBtn
+    do: click
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: ThreeDayBtn
+    do: click
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: LastWeekBtn
+    do: click
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: LastMonthBtn
+    do: click
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: ThreeMonthBtn
+    do: click
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: mainLogTable
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: mainLogTable
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: mainLogTable
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: mainLogTable
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: mainLogTable
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: mainLogTable
+- id: suite_filter_dropdown_s1
+  name: 筛选下拉框与导出_依次展开
+  module: filter
+  steps:
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: level_combox
+    do: click
+  - step_type: action
+    action: keyboard_press
+    key: Escape
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: app_combox
+    do: click
+  - step_type: action
+    action: keyboard_press
+    key: Escape
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: status_combox
+    do: click
+  - step_type: action
+    action: keyboard_press
+    key: Escape
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: event_type_combox
+    do: click
+  - step_type: action
+    action: keyboard_press
+    key: Escape
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: CbxDnfLv
+    do: click
+  - step_type: action
+    action: keyboard_press
+    key: Escape
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: CbxSubmodule
+    do: click
+  - step_type: action
+    action: keyboard_press
+    key: Escape
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: AuditTypeCbx
+    do: click
+  - step_type: action
+    action: keyboard_press
+    key: Escape
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: ExportBtn
+    do: click
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: level_combox
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: app_combox
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: status_combox
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: event_type_combox
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: CbxDnfLv
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: CbxSubmodule
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: AuditTypeCbx
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: ExportBtn
+- id: suite_logview_select_s1
+  name: 选择日志类型_点击列表项
+  module: logview
+  steps:
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: logTypeSelectList
+    do: click
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: logTypeSelectList
+- id: suite_logview_context_menu_s1
+  name: 右键菜单_在文件管理器中显示_清除日志_刷新
+  module: logview
+  steps:
+  - step_type: action
+    action: mouse_right_click
+    selector:
+      accessible_id: logTypeSelectList
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: GOpenForder
+    do: click
+  - step_type: action
+    action: mouse_right_click
+    selector:
+      accessible_id: logTypeSelectList
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: GClear
+    do: click
+  - step_type: action
+    action: mouse_right_click
+    selector:
+      accessible_id: logTypeSelectList
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: GRefresh
+    do: click
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: GOpenForder
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: logTypeSelectList
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: logTypeSelectList
+- id: suite_refresh_001_s1
+  name: 立即刷新_点击刷新按钮
+  module: refresh
+  steps:
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: RefreshBtn
+    do: click
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: logTypeSelectList
+- id: suite_search_001_s1
+  name: 搜索日志_输入关键词
+  module: search
+  steps:
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: searchEdt
+    do: click
+  - step_type: action
+    action: keyboard_type
+    text: error
+  - step_type: action
+    action: keyboard_press
+    key: Enter
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: mainLogTable

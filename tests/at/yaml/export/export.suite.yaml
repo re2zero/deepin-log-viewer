@@ -1,0 +1,24 @@
+name: export_suite
+app: deepin-log-viewer
+module: export
+setup:
+- action: session_start
+  command: deepin-log-viewer
+  wait: 3.0
+suites:
+- id: suite_export_001_s1
+  name: 全部导出_点击全部导出按钮
+  description: ''
+  steps:
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: ExportAllBtn
+    do: click
+  assert_steps:
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: ExportAllBtn
+teardown:
+- action: session_stop

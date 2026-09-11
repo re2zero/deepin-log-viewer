@@ -1,0 +1,24 @@
+name: detail_suite
+app: deepin-log-viewer
+module: detail
+setup:
+- action: session_start
+  command: deepin-log-viewer
+  wait: 3.0
+suites:
+- id: suite_detail_001_s1
+  name: 查看日志详情_文本浏览器
+  description: ''
+  steps:
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: mainLogTable
+    do: click
+  assert_steps:
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: TextBrowser
+teardown:
+- action: session_stop

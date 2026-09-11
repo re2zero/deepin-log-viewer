@@ -1,0 +1,47 @@
+elements:
+  mainLogTable:
+    accessible_id: mainLogTable
+  TextBrowser:
+    accessible_id: TextBrowser
+  ExportAllBtn:
+    accessible_id: ExportAllBtn
+  AllBtn:
+    accessible_id: AllBtn
+  TodayBtn:
+    accessible_id: TodayBtn
+  ThreeDayBtn:
+    accessible_id: ThreeDayBtn
+  LastWeekBtn:
+    accessible_id: LastWeekBtn
+  LastMonthBtn:
+    accessible_id: LastMonthBtn
+  ThreeMonthBtn:
+    accessible_id: ThreeMonthBtn
+  level_combox:
+    accessible_id: level_combox
+  app_combox:
+    accessible_id: app_combox
+  status_combox:
+    accessible_id: status_combox
+  event_type_combox:
+    accessible_id: event_type_combox
+  CbxDnfLv:
+    accessible_id: CbxDnfLv
+  CbxSubmodule:
+    accessible_id: CbxSubmodule
+  AuditTypeCbx:
+    accessible_id: AuditTypeCbx
+  ExportBtn:
+    accessible_id: ExportBtn
+  logTypeSelectList:
+    accessible_id: logTypeSelectList
+  GOpenForder:
+    accessible_id: GOpenForder
+  GClear:
+    accessible_id: GClear
+  GRefresh:
+    accessible_id: GRefresh
+  RefreshBtn:
+    accessible_id: RefreshBtn
+  searchEdt:
+    accessible_id: searchEdt

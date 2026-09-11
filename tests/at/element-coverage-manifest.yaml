@@ -1,0 +1,121 @@
+version: '1.0'
+source: at-case-authoring:element-map.yaml
+scan_total: 23
+elements:
+  searchEdt:
+    role: text
+    ui_name: 搜索输入框
+    desc: 标题栏搜索输入框
+    locator: accessible_id
+  logTypeSelectList:
+    role: list
+    ui_name: 日志类型列表
+    desc: 左侧日志类型列表
+    locator: accessible_id
+  AllBtn:
+    role: button
+    ui_name: 全部按钮
+    desc: 全部时间筛选按钮
+    locator: accessible_id
+  TodayBtn:
+    role: button
+    ui_name: 今天按钮
+    desc: 今天时间筛选按钮
+    locator: accessible_id
+  ThreeDayBtn:
+    role: button
+    ui_name: 3天按钮
+    desc: 3天时间筛选按钮
+    locator: accessible_id
+  LastWeekBtn:
+    role: button
+    ui_name: 1周按钮
+    desc: 1周时间筛选按钮
+    locator: accessible_id
+  LastMonthBtn:
+    role: button
+    ui_name: 1月按钮
+    desc: 1月时间筛选按钮
+    locator: accessible_id
+  ThreeMonthBtn:
+    role: button
+    ui_name: 3月按钮
+    desc: 3月时间筛选按钮
+    locator: accessible_id
+  level_combox:
+    role: combo box
+    ui_name: 等级下拉框
+    desc: 等级下拉框
+    locator: accessible_id
+  app_combox:
+    role: combo box
+    ui_name: 应用下拉框
+    desc: 应用下拉框
+    locator: accessible_id
+  status_combox:
+    role: combo box
+    ui_name: 状态下拉框
+    desc: 状态下拉框
+    locator: accessible_id
+  event_type_combox:
+    role: combo box
+    ui_name: 事件类型下拉框
+    desc: 事件类型下拉框
+    locator: accessible_id
+  CbxDnfLv:
+    role: combo box
+    ui_name: DNF等级下拉框
+    desc: DNF等级下拉框
+    locator: accessible_id
+  CbxSubmodule:
+    role: combo box
+    ui_name: 子模块下拉框
+    desc: 子模块下拉框
+    locator: accessible_id
+  AuditTypeCbx:
+    role: combo box
+    ui_name: 审计类型下拉框
+    desc: 审计类型下拉框
+    locator: accessible_id
+  ExportBtn:
+    role: button
+    ui_name: 导出按钮
+    desc: 导出按钮（筛选区域）
+    locator: accessible_id
+  ExportAllBtn:
+    role: button
+    ui_name: 全部导出按钮
+    desc: 全部导出按钮（标题栏）
+    locator: accessible_id
+  RefreshBtn:
+    role: button
+    ui_name: 立即刷新按钮
+    desc: 立即刷新按钮（标题栏）
+    locator: accessible_id
+  mainLogTable:
+    role: table
+    ui_name: 主日志表格
+    desc: 主日志表格
+    locator: accessible_id
+  TextBrowser:
+    role: text
+    ui_name: 文本浏览器
+    desc: 详情信息文本浏览器
+    locator: accessible_id
+  GOpenForder:
+    role: menu item
+    ui_name: 在文件管理器中显示
+    desc: 右键菜单-在文件管理器中显示
+    locator: accessible_id
+  GClear:
+    role: menu item
+    ui_name: 清除日志内容
+    desc: 右键菜单-清除日志内容
+    locator: accessible_id
+  GRefresh:
+    role: menu item
+    ui_name: 右键菜单刷新
+    desc: 右键菜单-刷新
+    locator: accessible_id
+transient_items: []
+unresolved: []

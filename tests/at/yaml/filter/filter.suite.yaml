@@ -1,0 +1,167 @@
+name: filter_suite
+app: deepin-log-viewer
+module: filter
+setup:
+- action: session_start
+  command: deepin-log-viewer
+  wait: 3.0
+suites:
+- id: suite_filter_time_s1
+  name: 按时间筛选_全部按钮依次点击
+  description: ''
+  steps:
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: AllBtn
+    do: click
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: TodayBtn
+    do: click
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: ThreeDayBtn
+    do: click
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: LastWeekBtn
+    do: click
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: LastMonthBtn
+    do: click
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: ThreeMonthBtn
+    do: click
+  assert_steps:
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: mainLogTable
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: mainLogTable
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: mainLogTable
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: mainLogTable
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: mainLogTable
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: mainLogTable
+- id: suite_filter_dropdown_s1
+  name: 筛选下拉框与导出_依次展开
+  description: ''
+  steps:
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: level_combox
+    do: click
+  - step_type: action
+    action: keyboard_press
+    key: Escape
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: app_combox
+    do: click
+  - step_type: action
+    action: keyboard_press
+    key: Escape
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: status_combox
+    do: click
+  - step_type: action
+    action: keyboard_press
+    key: Escape
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: event_type_combox
+    do: click
+  - step_type: action
+    action: keyboard_press
+    key: Escape
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: CbxDnfLv
+    do: click
+  - step_type: action
+    action: keyboard_press
+    key: Escape
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: CbxSubmodule
+    do: click
+  - step_type: action
+    action: keyboard_press
+    key: Escape
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: AuditTypeCbx
+    do: click
+  - step_type: action
+    action: keyboard_press
+    key: Escape
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: ExportBtn
+    do: click
+  assert_steps:
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: level_combox
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: app_combox
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: status_combox
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: event_type_combox
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: CbxDnfLv
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: CbxSubmodule
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: AuditTypeCbx
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: ExportBtn
+teardown:
+- action: session_stop

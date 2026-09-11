@@ -1,0 +1,68 @@
+name: logview_suite
+app: deepin-log-viewer
+module: logview
+setup:
+- action: session_start
+  command: deepin-log-viewer
+  wait: 3.0
+suites:
+- id: suite_logview_select_s1
+  name: 选择日志类型_点击列表项
+  description: ''
+  steps:
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: logTypeSelectList
+    do: click
+  assert_steps:
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: logTypeSelectList
+- id: suite_logview_context_menu_s1
+  name: 右键菜单_在文件管理器中显示_清除日志_刷新
+  description: ''
+  steps:
+  - step_type: action
+    action: mouse_right_click
+    selector:
+      accessible_id: logTypeSelectList
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: GOpenForder
+    do: click
+  - step_type: action
+    action: mouse_right_click
+    selector:
+      accessible_id: logTypeSelectList
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: GClear
+    do: click
+  - step_type: action
+    action: mouse_right_click
+    selector:
+      accessible_id: logTypeSelectList
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: GRefresh
+    do: click
+  assert_steps:
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: GOpenForder
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: logTypeSelectList
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: logTypeSelectList
+teardown:
+- action: session_stop

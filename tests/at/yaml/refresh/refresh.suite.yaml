@@ -1,0 +1,24 @@
+name: refresh_suite
+app: deepin-log-viewer
+module: refresh
+setup:
+- action: session_start
+  command: deepin-log-viewer
+  wait: 3.0
+suites:
+- id: suite_refresh_001_s1
+  name: 立即刷新_点击刷新按钮
+  description: ''
+  steps:
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: RefreshBtn
+    do: click
+  assert_steps:
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: logTypeSelectList
+teardown:
+- action: session_stop

@@ -1,0 +1,30 @@
+name: search_suite
+app: deepin-log-viewer
+module: search
+setup:
+- action: session_start
+  command: deepin-log-viewer
+  wait: 3.0
+suites:
+- id: suite_search_001_s1
+  name: 搜索日志_输入关键词
+  description: ''
+  steps:
+  - step_type: action
+    action: element_action
+    selector:
+      accessible_id: searchEdt
+    do: click
+  - step_type: action
+    action: keyboard_type
+    text: error
+  - step_type: action
+    action: keyboard_press
+    key: Enter
+  assert_steps:
+  - step_type: assert
+    action: assert_element
+    selector:
+      accessible_id: mainLogTable
+teardown:
+- action: session_stop

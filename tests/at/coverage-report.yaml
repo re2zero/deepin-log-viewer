@@ -1,0 +1,9 @@
+scan_total: 23
+transient_items: []
+unreachable: 0
+denominator: 23
+covered: 23
+uncovered: 0
+coverage: 100.0
+passed: true
+uncovered_elements: []
